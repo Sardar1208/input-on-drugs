@@ -38,7 +38,6 @@ export const InputOD = ({
           id="main_input"
           style={{
             outline: 'none',
-            fontSize: "16px",
             ...textStyle,
           }}
           contentEditable="true"

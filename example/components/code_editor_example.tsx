@@ -9,20 +9,9 @@ const CodeEditorExample = () => {
   const linesRef = React.useRef<any>(null);
 
   const styles = {
-    container: {
-      padding: '20px',
-    },
     input: {
       fontSize: '16px',
       color: 'white',
-    },
-    placeholder: {
-      color: '#999',
-    },
-    inputFocus: {
-      outline: 'none',
-      borderColor: '#00bfff',
-      boxShadow: '0 8px 16px rgba(0, 191, 255, 0.4)',
     },
   };
 

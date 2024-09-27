@@ -15,11 +15,6 @@ const ValidationExample = () => {
       transition: 'all 0.3s ease-in-out',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
     },
-    inputFocus: {
-      outline: 'none',
-      borderColor: '#00bfff',
-      boxShadow: '0 8px 16px rgba(0, 191, 255, 0.4)',
-    },
   };
 
   return (
