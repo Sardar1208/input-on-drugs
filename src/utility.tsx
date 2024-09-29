@@ -1,3 +1,4 @@
+/// Returns the cursor position in the input field
 function getCursorPosition() {
   let editor = document.getElementById('main_input');
 
@@ -37,6 +38,7 @@ interface HighlightOptions {
   onlyHighlightIndependentWord?: boolean; // Option to highlight as an independent word or part of another word
 }
 
+/// Returns styled HTML from plain text based on the provided configuration 
 export function highlightWords(
   text: string,
   wordsToHighlight: string[],
@@ -64,6 +66,7 @@ export function highlightWords(
   });
 }
 
+/// The HTML returned from onChangeOD is filtered to verfiy that it only contains the text and span nodes
 function sanitizeToSpanOnly(html: string): string {
   // Create a temporary div element to manipulate the HTML
   const tempDiv = document.createElement('div');
@@ -80,6 +83,10 @@ function sanitizeToSpanOnly(html: string): string {
   return tempDiv.innerHTML;
 }
 
+/// Responsible for the following things - 
+/// - Record cursor position
+/// - insert HTML in the input field
+/// - Restore the cursor position
 export function updateCode(
   onChangeOD: (input: string) => string,
   editorRef: React.MutableRefObject<any>
@@ -88,8 +95,7 @@ export function updateCode(
   let text = editor ? editor.innerText : '';
 
   if (editor != null && text.length <= 0) {
-    // editor.innerHTML = "<span style={{color: 'grey'}}>Enter something<span>";
-    editor.innerHTML = '&nbsp;';
+    editor.innerHTML = '&nbsp;'; /// If the input field is empty, then enter a empty space
     const range = document.createRange();
     const selection = window.getSelection();
 

@@ -10,6 +10,10 @@
   "engines": {
     "node": ">=10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sardar1208/input-on-drugs"
+  },
   "keywords": ["typescript", "input", "dynamic input", "code editor"],
   "scripts": {
     "start": "tsdx watch",
